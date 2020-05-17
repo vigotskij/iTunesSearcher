@@ -13,10 +13,11 @@ struct ITunesResponseDataModel: Decodable {
     var collectionIDString: String {
         String(describing: collectionID)
     }
+    let artworkUrl100: String?
     let artistName, collectionName, trackName: String?
     let trackCensoredName, collectionCensoredName: String?
     let trackCount, trackNumber: Int?
-    
+
     static func < (lhs: ITunesResponseDataModel, rhs: ITunesResponseDataModel) -> Bool {
         guard
             let lhsNumber = lhs.trackNumber,
@@ -31,9 +32,9 @@ extension ITunesResponseDataModel {
         case track
         case collection
         case artist
-        
+
         case unknown
-        
+
         init(from decoder: Decoder) throws {
             self = try WrappedType(rawValue:
                 decoder
@@ -45,9 +46,9 @@ extension ITunesResponseDataModel {
     enum Kind: String, Decodable {
         case song
         case album
-        
+
         case unknown
-        
+
         enum CodingKeys: String, CodingKey {
             case song
             case album = "Album"
