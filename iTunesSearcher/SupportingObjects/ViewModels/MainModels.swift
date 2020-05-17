@@ -7,8 +7,6 @@
 //
 
 enum MainModels {
-    // MARK: - Raw data for Interactor
-    struct Response {}
     // MARK: - Interactor processed data for Presenter
     struct DataModel {}
     // MARK: - Modeled data for pasive view

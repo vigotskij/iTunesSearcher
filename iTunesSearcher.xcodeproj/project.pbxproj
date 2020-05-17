@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12FB776246E17DE006ACDEE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FB775246E17DE006ACDEE /* Constants.swift */; };
 		A146ED8A2468DB820017C8E6 /* MainContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED892468DB820017C8E6 /* MainContracts.swift */; };
 		A146ED8C2468E31B0017C8E6 /* MainInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED8B2468E31B0017C8E6 /* MainInteractorImplementation.swift */; };
 		A146ED8E2468E69D0017C8E6 /* MainPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED8D2468E69D0017C8E6 /* MainPresenterImplementation.swift */; };
 		A146ED902468E9D60017C8E6 /* MainRouterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED8F2468E9D60017C8E6 /* MainRouterImplementation.swift */; };
 		A146ED922468EA940017C8E6 /* MainConfiguratorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED912468EA940017C8E6 /* MainConfiguratorImplementation.swift */; };
+		A16595CA2470B202009D1AD1 /* ITunesResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16595C92470B202009D1AD1 /* ITunesResponseDataModel.swift */; };
 		A174656A2468C01800070F09 /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17465692468C01800070F09 /* Architecture.swift */; };
 		A1AB4B5B246CDEAD00A39011 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AB4B5A246CDEAD00A39011 /* MainModels.swift */; };
 		A1AB4B5D246CDEF600A39011 /* DetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AB4B5C246CDEF600A39011 /* DetailModels.swift */; };
@@ -44,11 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A12FB775246E17DE006ACDEE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A146ED892468DB820017C8E6 /* MainContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContracts.swift; sourceTree = "<group>"; };
 		A146ED8B2468E31B0017C8E6 /* MainInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorImplementation.swift; sourceTree = "<group>"; };
 		A146ED8D2468E69D0017C8E6 /* MainPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterImplementation.swift; sourceTree = "<group>"; };
 		A146ED8F2468E9D60017C8E6 /* MainRouterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterImplementation.swift; sourceTree = "<group>"; };
 		A146ED912468EA940017C8E6 /* MainConfiguratorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfiguratorImplementation.swift; sourceTree = "<group>"; };
+		A16595C92470B202009D1AD1 /* ITunesResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesResponseDataModel.swift; sourceTree = "<group>"; };
 		A17465692468C01800070F09 /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		A1AB4B5A246CDEAD00A39011 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
 		A1AB4B5C246CDEF600A39011 /* DetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModels.swift; sourceTree = "<group>"; };
@@ -97,8 +101,9 @@
 		A17465652468BB2900070F09 /* SupportingObjects */ = {
 			isa = PBXGroup;
 			children = (
-				A1AB4B5A246CDEAD00A39011 /* MainModels.swift */,
-				A1AB4B5C246CDEF600A39011 /* DetailModels.swift */,
+				A188632C2470FAE900513639 /* ViewModels */,
+				A188632B2470FADB00513639 /* DataModels */,
+				A12FB775246E17DE006ACDEE /* Constants.swift */,
 			);
 			path = SupportingObjects;
 			sourceTree = "<group>";
@@ -127,6 +132,23 @@
 				A1AB4B5E246CDF7F00A39011 /* RequestInterceptor.swift */,
 			);
 			path = Contracts;
+			sourceTree = "<group>";
+		};
+		A188632B2470FADB00513639 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				A16595C92470B202009D1AD1 /* ITunesResponseDataModel.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		A188632C2470FAE900513639 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1AB4B5A246CDEAD00A39011 /* MainModels.swift */,
+				A1AB4B5C246CDEF600A39011 /* DetailModels.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A1AB4B57246CD45200A39011 /* MainScreen */ = {
@@ -344,6 +366,7 @@
 			files = (
 				A174656A2468C01800070F09 /* Architecture.swift in Sources */,
 				A146ED8C2468E31B0017C8E6 /* MainInteractorImplementation.swift in Sources */,
+				A12FB776246E17DE006ACDEE /* Constants.swift in Sources */,
 				A1AB4B5B246CDEAD00A39011 /* MainModels.swift in Sources */,
 				A146ED8A2468DB820017C8E6 /* MainContracts.swift in Sources */,
 				A1C73A2124687547007049F2 /* MainViewController.swift in Sources */,
@@ -354,6 +377,7 @@
 				A146ED902468E9D60017C8E6 /* MainRouterImplementation.swift in Sources */,
 				A1C73A1F24687547007049F2 /* SceneDelegate.swift in Sources */,
 				A146ED8E2468E69D0017C8E6 /* MainPresenterImplementation.swift in Sources */,
+				A16595CA2470B202009D1AD1 /* ITunesResponseDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
