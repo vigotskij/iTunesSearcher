@@ -19,3 +19,10 @@ enum Endpoints{
         }
     }
 }
+
+struct PaginationConstants {
+    static let paginationKey = "pagination"
+    static let offsetKey = "offset"
+    static let paginationDefault = 20
+    static let offsetDefault = 0
+}

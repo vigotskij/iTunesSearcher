@@ -7,5 +7,5 @@
 //
 import Foundation
 protocol RequestInterceptor {
-    func intercept(request: URLRequest, completionHandler: @escaping (URLRequest) -> Void )
+    func intercept(request: URL, completionHandler: @escaping (URLRequest?) -> Void )
 }
