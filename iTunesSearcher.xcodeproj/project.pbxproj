@@ -11,6 +11,7 @@
 		26C553532D3EEF73CD48B3ED /* libPods-iTunesSearcherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FEF7D5BDDD5B50E3BCC9C3 /* libPods-iTunesSearcherTests.a */; };
 		A12FB776246E17DE006ACDEE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FB775246E17DE006ACDEE /* Constants.swift */; };
 		A140107D2482EE8F00455395 /* URLSession+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140107C2482EE8F00455395 /* URLSession+extension.swift */; };
+		A140107F2482F4FB00455395 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140107E2482F4FB00455395 /* Endpoints.swift */; };
 		A146ED8A2468DB820017C8E6 /* MainContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED892468DB820017C8E6 /* MainContracts.swift */; };
 		A146ED8C2468E31B0017C8E6 /* MainInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED8B2468E31B0017C8E6 /* MainInteractorImplementation.swift */; };
 		A146ED8E2468E69D0017C8E6 /* MainPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146ED8D2468E69D0017C8E6 /* MainPresenterImplementation.swift */; };
@@ -47,6 +48,7 @@
 		59FEF7D5BDDD5B50E3BCC9C3 /* libPods-iTunesSearcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iTunesSearcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12FB775246E17DE006ACDEE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A140107C2482EE8F00455395 /* URLSession+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+extension.swift"; sourceTree = "<group>"; };
+		A140107E2482F4FB00455395 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		A146ED892468DB820017C8E6 /* MainContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContracts.swift; sourceTree = "<group>"; };
 		A146ED8B2468E31B0017C8E6 /* MainInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorImplementation.swift; sourceTree = "<group>"; };
 		A146ED8D2468E69D0017C8E6 /* MainPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterImplementation.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				A188632C2470FAE900513639 /* ViewModels */,
 				A188632B2470FADB00513639 /* DataModels */,
 				A12FB775246E17DE006ACDEE /* Constants.swift */,
+				A140107E2482F4FB00455395 /* Endpoints.swift */,
 			);
 			path = SupportingObjects;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			files = (
 				A174656A2468C01800070F09 /* Architecture.swift in Sources */,
 				A146ED8C2468E31B0017C8E6 /* MainInteractorImplementation.swift in Sources */,
+				A140107F2482F4FB00455395 /* Endpoints.swift in Sources */,
 				A12FB776246E17DE006ACDEE /* Constants.swift in Sources */,
 				A1AB4B5B246CDEAD00A39011 /* MainModels.swift in Sources */,
 				A140107D2482EE8F00455395 /* URLSession+extension.swift in Sources */,
