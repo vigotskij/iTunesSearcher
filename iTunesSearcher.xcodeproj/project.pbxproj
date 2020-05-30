@@ -214,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1C73A4324687548007049F2 /* Build configuration list for PBXNativeTarget "iTunesSearcher" */;
 			buildPhases = (
+				A13188B02482C3A8006C11D6 /* SwiftLint */,
 				A1C73A1524687547007049F2 /* Sources */,
 				A1C73A1624687547007049F2 /* Frameworks */,
 				A1C73A1724687547007049F2 /* Resources */,
@@ -302,6 +303,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A13188B02482C3A8006C11D6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1C73A1524687547007049F2 /* Sources */ = {

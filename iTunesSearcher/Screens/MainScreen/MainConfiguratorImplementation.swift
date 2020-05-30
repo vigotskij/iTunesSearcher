@@ -7,7 +7,5 @@
 //
 
 final class MainConfiguratorImplementation: MainConfigurator {
-    func configure(with viewController: MainViewController) {
-        
-    }
+    func configure(with viewController: MainViewController) {}
 }
