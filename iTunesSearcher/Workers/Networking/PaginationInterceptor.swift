@@ -8,11 +8,11 @@
 
 import Foundation
 final class PaginationRequestInterceptor: RequestInterceptor {
-    var pagination = PaginationConstants.paginationDefault
-    var offset = PaginationConstants.offsetDefault
+    private var pagination = PaginationConstants.paginationDefault
+    private var offset = PaginationConstants.offsetDefault
 
     func intercept(request: URL, completionHandler: @escaping (URLRequest?) -> Void) {
-        var components = URLComponents(url: request, resolvingAgainstBaseURL: true)
+        var components = URLComponents(url: request, resolvingAgainstBaseURL: false)
         components?.queryItems = getQueryElements()
         offset += pagination
         guard let interceptedRequest = components?.url else {
