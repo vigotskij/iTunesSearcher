@@ -21,4 +21,3 @@ final class MainViewController: UIViewController {
         configurator = MainConfiguratorImplementation()
     }
 }
-

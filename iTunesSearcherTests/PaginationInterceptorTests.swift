@@ -61,7 +61,7 @@ class PaginationInterceptorTests: XCTestCase {
                 }
                 let result = URLComponents(url: incrementedURL, resolvingAgainstBaseURL: false)?
                     .queryItems?
-                    .first{ $0.name == PaginationConstants.offsetKey }
+                    .first { $0.name == PaginationConstants.offsetKey }
                 let expectedResult =
                 "\(PaginationConstants.offsetDefault + PaginationConstants.paginationDefault)"
                 XCTAssertEqual(result?.value ?? "", expectedResult)
