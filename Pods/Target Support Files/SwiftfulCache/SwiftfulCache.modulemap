@@ -1,0 +1,6 @@
+framework module SwiftfulCache {
+  umbrella header "SwiftfulCache-umbrella.h"
+
+  export *
+  module * { export * }
+}
