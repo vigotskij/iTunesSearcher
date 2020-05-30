@@ -1,0 +1,16 @@
+PODS:
+  - SwiftfulCache (0.1.0)
+
+DEPENDENCIES:
+  - SwiftfulCache
+
+SPEC REPOS:
+  trunk:
+    - SwiftfulCache
+
+SPEC CHECKSUMS:
+  SwiftfulCache: 7b0209caa11b027d3a8ad7cd6f1c9b5997da596b
+
+PODFILE CHECKSUM: 4856459dfadb721f71c7b044217819ca5ee6d12f
+
+COCOAPODS: 1.9.2
