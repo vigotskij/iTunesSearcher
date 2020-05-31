@@ -9,3 +9,4 @@ protocol Interactor: class {}
 protocol Presenter: class {}
 protocol View: class {}
 protocol Router: class {}
+protocol Configurator: class {}
