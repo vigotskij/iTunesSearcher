@@ -23,6 +23,7 @@ extension URLSession {
                         return
                 }
                 if (200...299).contains(response.statusCode) {
+                    #if !DEBUG
                     do {
                         let decodedData = try JSONDecoder().decode(DecodableType.self,
                                                                    from: data ?? Data())
@@ -30,6 +31,26 @@ extension URLSession {
                     } catch {
                         completionHandler(nil, error)
                     }
+                    #else
+                    do {
+                        let decodedData = try JSONDecoder().decode(DecodableType.self,
+                                                                   from: data ?? Data())
+                        completionHandler(decodedData, nil)
+                    } catch let DecodingError.dataCorrupted(context) {
+                        print(context)
+                    } catch let DecodingError.keyNotFound(key, context) {
+                        print("Key '\(key)' not found:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch let DecodingError.valueNotFound(value, context) {
+                        print("Value '\(value)' not found:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch let DecodingError.typeMismatch(type, context) {
+                        print("Type '\(type)' mismatch:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch {
+                        print("error: ", error)
+                    }
+                    #endif
                 } else if (500...599).contains(response.statusCode) {
                     // TODO: Handle 5xx error
                 }
