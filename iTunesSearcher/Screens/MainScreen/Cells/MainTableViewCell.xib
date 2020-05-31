@@ -15,14 +15,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Q-ay-WIB">
-                        <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="asasda" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Q-ay-WIB">
+                        <rect key="frame" x="8" y="8" width="54.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it0-wu-CvJ">
-                        <rect key="frame" x="8" y="16" width="0.0" height="0.0"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasd" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it0-wu-CvJ">
+                        <rect key="frame" x="8" y="36.5" width="49.5" height="35.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,6 +30,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="it0-wu-CvJ" firstAttribute="top" secondItem="I3Q-ay-WIB" secondAttribute="bottom" constant="8" id="2TO-NK-5QV"/>
+                    <constraint firstAttribute="bottom" secondItem="it0-wu-CvJ" secondAttribute="bottom" constant="8" id="7UI-Oh-WRZ"/>
                     <constraint firstItem="I3Q-ay-WIB" firstAttribute="leading" secondItem="3H5-Zj-1Vs" secondAttribute="leading" constant="8" id="A04-ej-MWB"/>
                     <constraint firstItem="it0-wu-CvJ" firstAttribute="leading" secondItem="3H5-Zj-1Vs" secondAttribute="leading" constant="8" id="OiK-nj-Ahe"/>
                     <constraint firstItem="I3Q-ay-WIB" firstAttribute="top" secondItem="3H5-Zj-1Vs" secondAttribute="top" constant="8" id="wiS-re-cU1"/>
