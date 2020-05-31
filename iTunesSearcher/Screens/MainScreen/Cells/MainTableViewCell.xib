@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8c0-3p-MuM" customClass="MainTableViewCell" customModule="iTunesSearcher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8c0-3p-MuM" id="3H5-Zj-1Vs">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Q-ay-WIB">
+                        <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it0-wu-CvJ">
+                        <rect key="frame" x="8" y="16" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="it0-wu-CvJ" firstAttribute="top" secondItem="I3Q-ay-WIB" secondAttribute="bottom" constant="8" id="2TO-NK-5QV"/>
+                    <constraint firstItem="I3Q-ay-WIB" firstAttribute="leading" secondItem="3H5-Zj-1Vs" secondAttribute="leading" constant="8" id="A04-ej-MWB"/>
+                    <constraint firstItem="it0-wu-CvJ" firstAttribute="leading" secondItem="3H5-Zj-1Vs" secondAttribute="leading" constant="8" id="OiK-nj-Ahe"/>
+                    <constraint firstItem="I3Q-ay-WIB" firstAttribute="top" secondItem="3H5-Zj-1Vs" secondAttribute="top" constant="8" id="wiS-re-cU1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistLabel" destination="it0-wu-CvJ" id="tLv-WC-0Dg"/>
+                <outlet property="titleLabel" destination="I3Q-ay-WIB" id="hs5-gj-lrW"/>
+            </connections>
+            <point key="canvasLocation" x="-109" y="-2"/>
+        </tableViewCell>
+    </objects>
+</document>
