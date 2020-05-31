@@ -28,7 +28,7 @@ extension MainInteractorImplementation: MainInteractor {
         URLSession.shared
             .retrieveData(with: endpoint,
                           interceptor: interceptor,
-                          completionHandler: { [weak self] (response: [ITunesResponseDataModel]?, error) in
+                          completionHandler: { [weak self] (response: ITunesResponseContainer?, error) in
                             guard
                                 let self = self,
                                 let response = response else {
@@ -37,7 +37,7 @@ extension MainInteractorImplementation: MainInteractor {
                                     #endif
                                     return
                             }
-                            let filteredResponse = response.filter {$0.wrapperType == .track}
+                            let filteredResponse = response.results.filter {$0.wrapperType == .track}
                             self.retrievedResponses = .init(rawData: filteredResponse)
             })
     }

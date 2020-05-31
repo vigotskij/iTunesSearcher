@@ -6,6 +6,9 @@
 //  Copyright © 2020 Boris Sortino. All rights reserved.
 //
 import Foundation
+struct ITunesResponseContainer: Decodable {
+    let results: [ITunesResponseDataModel]
+}
 struct ITunesResponseDataModel: Decodable {
     let wrapperType: WrappedType
     let kind: Kind
@@ -14,9 +17,13 @@ struct ITunesResponseDataModel: Decodable {
         String(describing: collectionID)
     }
     let artworkUrl100: String?
-    let artistName, collectionName, trackName: String?
-    let trackCensoredName, collectionCensoredName: String?
-    let trackCount, trackNumber: Int?
+    let artistName: String?
+    let collectionName: String
+    let trackName: String?
+    let trackCensoredName: String?
+    let collectionCensoredName: String?
+    let trackCount: Int?
+    let trackNumber: Int?
 
     static func < (lhs: ITunesResponseDataModel, rhs: ITunesResponseDataModel) -> Bool {
         guard
