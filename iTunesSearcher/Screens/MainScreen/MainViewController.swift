@@ -47,14 +47,33 @@ final class MainViewController: UIViewController {
     }
 }
 extension MainViewController: MainView {
-    func updateView(with viewModel: [MainModels.CellViewModel]) {
-        self.viewModel = viewModel
+    func updateView(with viewModel: MainModels.ViewModel) {
+        self.viewModel = viewModel.cellsViewModel
     }
 
     func routeToDetailScreen() {}
 }
+
 // MARK: - Search bar delegate
-extension MainViewController: UISearchBarDelegate {}
+extension MainViewController: UISearchBarDelegate {
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        guard let searchText = searchBar.text else {
+            return false
+        }
+        output?.search(with: searchText)
+        return true
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            searchBar.resignFirstResponder()
+            return
+        }
+        output?.search(with: searchText)
+        searchBar.resignFirstResponder()
+    }
+}
+
 // MARK: - Table view delegate & data source
 extension MainViewController: UITableViewDelegate {}
 extension MainViewController: UITableViewDataSource {
