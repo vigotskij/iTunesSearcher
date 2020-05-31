@@ -20,10 +20,10 @@ protocol MainInteractor: Interactor {
     func routeToDetailScreen(with: String)
 }
 protocol MainPresenter {
-    func updatePresentedState(with data: [MainModels.DataModel])
+    func updatePresentedState(with data: MainModels.DataModel)
     func routeToDetailScreen()
 }
 protocol MainView: View {
-    func updateView(with viewModel: [MainModels.CellViewModel])
+    func updateView(with viewModel: MainModels.ViewModel)
     func routeToDetailScreen()
 }

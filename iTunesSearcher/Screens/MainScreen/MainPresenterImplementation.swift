@@ -12,7 +12,7 @@ final class MainPresenterImplementation {
     }
 }
 extension MainPresenterImplementation: MainPresenter {
-    func updatePresentedState(with data: [MainModels.DataModel]) {}
+    func updatePresentedState(with data: MainModels.DataModel) {}
 
     func routeToDetailScreen() {}
 }
