@@ -11,19 +11,19 @@ protocol MainConfigurator: Configurator {
 }
 // MARK: - Routing
 protocol MainRouter: Router {
-    func routeToDetailScreen()
+    func routeToDetailScreen(with collectionId: String)
 }
 // MARK: - Inner structure
 protocol MainInteractor: Interactor {
     func viewDidLoad()
     func search(with term: String)
-    func routeToDetailScreen(with: String)
+    func routeToDetailScreen(with item: Int)
 }
 protocol MainPresenter {
     func updatePresentedState(with data: MainModels.DataModel)
-    func routeToDetailScreen()
+    func routeToDetailScreen(with collectionId: String)
 }
 protocol MainView: View {
     func updateView(with viewModel: MainModels.ViewModel)
-    func routeToDetailScreen()
+    func routeToDetailScreen(with collectionId: String)
 }

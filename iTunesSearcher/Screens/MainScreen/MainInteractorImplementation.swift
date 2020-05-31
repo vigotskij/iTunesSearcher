@@ -42,7 +42,12 @@ extension MainInteractorImplementation: MainInteractor {
             })
     }
 
-    func routeToDetailScreen(with: String) {}
+    func routeToDetailScreen(with item: Int) {
+        guard let collectionId = retrievedResponses.rawData[item].collectionIdString else {
+            return
+        }
+        output?.routeToDetailScreen(with: collectionId)
+    }
 
     func viewDidLoad() {}
 }

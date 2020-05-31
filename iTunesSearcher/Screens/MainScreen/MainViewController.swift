@@ -9,12 +9,12 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-    weak var router: MainRouter?
+    var router: MainRouter?
     var output: MainInteractor?
     private var configurator: MainConfigurator? {
         didSet {
             configurator?.configure(with: self)
-            configurator = nil
+//            configurator = nil
         }
     }
     // MARK: - Outlets
@@ -51,7 +51,9 @@ extension MainViewController: MainView {
         self.viewModel = viewModel.cellsViewModel
     }
 
-    func routeToDetailScreen() {}
+    func routeToDetailScreen(with collectionId: String) {
+        router?.routeToDetailScreen(with: collectionId)
+    }
 }
 
 // MARK: - Search bar delegate
@@ -90,6 +92,9 @@ extension MainViewController: UITableViewDataSource {
         }
         cell.set(with: cellViewModel)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output?.routeToDetailScreen(with: indexPath.row)
     }
 }
 // MARK: - private functions

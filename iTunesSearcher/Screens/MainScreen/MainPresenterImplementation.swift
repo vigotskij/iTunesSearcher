@@ -16,5 +16,7 @@ extension MainPresenterImplementation: MainPresenter {
         output?.updateView(with: MainModels.ViewModel(from: data))
     }
 
-    func routeToDetailScreen() {}
+    func routeToDetailScreen(with collectionId: String) {
+        output?.routeToDetailScreen(with: collectionId)
+    }
 }

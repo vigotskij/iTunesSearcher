@@ -12,9 +12,12 @@ struct ITunesResponseContainer: Decodable {
 struct ITunesResponseDataModel: Decodable {
     let wrapperType: WrappedType
     let kind: Kind
-    let collectionID: Int?
-    var collectionIDString: String {
-        String(describing: collectionID)
+    let collectionId: Int?
+    var collectionIdString: String? {
+        guard let collectionId = collectionId else {
+            return nil
+        }
+        return String(describing: collectionId)
     }
     let artworkUrl100: String?
     let artistName: String?
