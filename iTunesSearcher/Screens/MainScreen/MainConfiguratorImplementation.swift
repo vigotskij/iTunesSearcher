@@ -7,5 +7,11 @@
 //
 
 final class MainConfiguratorImplementation: MainConfigurator {
-    func configure(with viewController: MainViewController) {}
+    func configure(with viewController: MainViewController) {
+        let presenter: MainPresenter = MainPresenterImplementation(output: viewController)
+        let interactor: MainInteractor = MainInteractorImplementation(output: presenter)
+        let router: MainRouter = MainRouterImplementation(viewController: viewController)
+        viewController.router = router
+        viewController.output = interactor
+    }
 }

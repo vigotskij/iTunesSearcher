@@ -5,19 +5,25 @@
 //  Created by Boris Sortino on 10/05/2020.
 //  Copyright © 2020 Boris Sortino. All rights reserved.
 //
-// MARK: init helper
-protocol MainConfigurator {
+// MARK: - init helper
+protocol MainConfigurator: Configurator {
     func configure(with viewController: MainViewController)
 }
-// MARK: Routing
-protocol MainRouter {}
-// MARK: Inner structure
+// MARK: - Routing
+protocol MainRouter: Router {
+    func routeToDetailScreen()
+}
+// MARK: - Inner structure
 protocol MainInteractor: Interactor {
     func viewDidLoad()
+    func search(with term: String)
+    func routeToDetailScreen(with: String)
 }
-protocol MainPresenter: Presenter {}
-protocol MainView: View {}
-// MARK: Readability
-protocol ViewOutput: MainInteractor {}
-protocol InteractorOutput: MainPresenter {}
-protocol PresenterOutput: MainView {}
+protocol MainPresenter {
+    func updatePresentedState(with data: [MainModels.DataModel])
+    func routeToDetailScreen()
+}
+protocol MainView: View {
+    func updateView(with viewModel: [MainModels.CellViewModel])
+    func routeToDetailScreen()
+}

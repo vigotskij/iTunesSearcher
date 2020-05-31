@@ -9,6 +9,8 @@
 import UIKit
 
 final class MainViewController: UIViewController {
+    weak var router: MainRouter?
+    var output: MainInteractor?
     private var configurator: MainConfigurator? {
         didSet {
             configurator?.configure(with: self)
@@ -20,4 +22,9 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         configurator = MainConfiguratorImplementation()
     }
+}
+extension MainViewController: MainView {
+    func updateView(with viewModel: [MainModels.CellViewModel]) {}
+
+    func routeToDetailScreen() {}
 }
