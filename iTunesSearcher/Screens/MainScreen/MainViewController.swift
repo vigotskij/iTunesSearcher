@@ -17,14 +17,65 @@ final class MainViewController: UIViewController {
             configurator = nil
         }
     }
-
+    // MARK: - Outlets
+    @IBOutlet weak var searchBar: UISearchBar? {
+        didSet {
+            searchBar?.delegate = self
+            searchBar?.becomeFirstResponder()
+        }
+    }
+    @IBOutlet weak var tableView: UITableView? {
+        didSet {
+            tableView?.delegate = self
+            tableView?.dataSource = self
+            tableView?.register(UINib(nibName: String(describing: MainTableViewCell.self),
+                                      bundle: nil),
+                                forCellReuseIdentifier: String(describing: MainTableViewCell.self))
+        }
+    }
+    // MARK: - View Model
+    private var viewModel: [MainModels.CellViewModel]? {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.updateUI()
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator = MainConfiguratorImplementation()
     }
 }
 extension MainViewController: MainView {
-    func updateView(with viewModel: [MainModels.CellViewModel]) {}
+    func updateView(with viewModel: [MainModels.CellViewModel]) {
+        self.viewModel = viewModel
+    }
 
     func routeToDetailScreen() {}
+}
+// MARK: - Search bar delegate
+extension MainViewController: UISearchBarDelegate {}
+// MARK: - Table view delegate & data source
+extension MainViewController: UITableViewDelegate {}
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MainTableViewCell.self),
+                                                     for: indexPath) as? MainTableViewCell,
+            let cellViewModel = self.viewModel?[indexPath.row] else {
+            return UITableViewCell()
+        }
+        cell.set(with: cellViewModel)
+        return cell
+    }
+}
+// MARK: - private functions
+private extension MainViewController {
+    func updateUI() {
+        tableView?.reloadData()
+    }
 }

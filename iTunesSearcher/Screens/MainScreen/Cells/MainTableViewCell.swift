@@ -33,5 +33,8 @@ class MainTableViewCell: UITableViewCell {
         titleLabel?.text = nil
         artistLabel?.text = nil
     }
+    func set(with viewModel: MainModels.CellViewModel) {
+        self.viewModel = viewModel
+    }
 
 }
