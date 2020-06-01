@@ -19,8 +19,8 @@ protocol DetailInteractor: Interactor {
     func viewDidLoad()
 }
 protocol DetailPresenter: Presenter {
-    func presentData()
+    func presentData(with processedData: DetailModels.DataModel)
 }
 protocol DetailView: View {
-    func updateView()
+    func updateView(with viewModel: DetailModels.ViewModel)
 }
