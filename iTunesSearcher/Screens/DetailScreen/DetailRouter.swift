@@ -8,11 +8,11 @@
 
 final class DetailRouterImplementation: DetailRouter {
     let viewController: DetailViewController
-    
+
     init(viewController: DetailViewController) {
         self.viewController = viewController
     }
-    
+
     func dismiss() {
         viewController.dismiss(animated: true, completion: nil)
     }

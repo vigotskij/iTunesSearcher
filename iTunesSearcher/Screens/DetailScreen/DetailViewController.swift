@@ -25,7 +25,7 @@ final class DetailViewController: UIViewController {
 }
 extension DetailViewController: DetailView {
     func updateView() {
-        
+
     }
 }
 private extension DetailViewController {

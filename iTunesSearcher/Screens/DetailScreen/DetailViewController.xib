@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,11 +14,45 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfO-b0-HTD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OA4-pL-9Hk">
+                            <rect key="frame" x="137.5" y="44" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="ApP-Sf-Heu"/>
+                                <constraint firstAttribute="width" secondItem="OA4-pL-9Hk" secondAttribute="height" multiplier="1:1" id="v5e-Vm-meP"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="OA4-pL-9Hk" firstAttribute="centerX" secondItem="UfO-b0-HTD" secondAttribute="centerX" id="Dck-gx-teT"/>
+                        <constraint firstAttribute="width" constant="375" id="EcN-5r-YZ3"/>
+                        <constraint firstItem="OA4-pL-9Hk" firstAttribute="centerY" secondItem="UfO-b0-HTD" secondAttribute="centerY" id="G19-SX-zCV"/>
+                        <constraint firstAttribute="width" secondItem="UfO-b0-HTD" secondAttribute="height" multiplier="2:1" id="ju9-Vo-VoZ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYN-gE-Re3">
+                    <rect key="frame" x="0.0" y="187.5" width="375" height="479.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="UfO-b0-HTD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2WV-bd-uXg"/>
+                <constraint firstItem="UfO-b0-HTD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6o5-zJ-hmU"/>
+                <constraint firstItem="OYN-gE-Re3" firstAttribute="top" secondItem="UfO-b0-HTD" secondAttribute="bottom" id="HRY-m0-qZb"/>
+                <constraint firstItem="OYN-gE-Re3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JyY-be-bge"/>
+                <constraint firstItem="UfO-b0-HTD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="VG4-0G-Ej1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OYN-gE-Re3" secondAttribute="bottom" id="zMx-Xi-hrq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OYN-gE-Re3" secondAttribute="trailing" id="zu4-ok-nTK"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="133" y="145"/>
+            <point key="canvasLocation" x="132" y="144.3778110944528"/>
         </view>
     </objects>
 </document>

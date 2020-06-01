@@ -8,7 +8,7 @@
 
 final class DetailPresenterImplementation {
     private var output: DetailView?
-    
+
     init(output: DetailView) {
         self.output = output
     }
