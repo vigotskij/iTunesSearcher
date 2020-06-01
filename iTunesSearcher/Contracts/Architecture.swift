@@ -6,6 +6,7 @@
 //  Copyright © 2020 Boris Sortino. All rights reserved.
 //
 protocol Interactor: class {}
+protocol DataStore: class {}
 protocol Presenter: class {}
 protocol View: class {}
 protocol Router: class {}
