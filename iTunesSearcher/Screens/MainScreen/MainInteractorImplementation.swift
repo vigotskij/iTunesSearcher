@@ -28,7 +28,7 @@ extension MainInteractorImplementation: MainInteractor {
         URLSession.shared
             .retrieveData(with: endpoint,
                           interceptor: interceptor,
-                          completionHandler: { [weak self] (response: ITunesResponseContainer?, error) in
+                          completionHandler: { [weak self] (response: ITunesResponseContainer?, _, error) in
                             guard
                                 let self = self,
                                 let response = response else {
