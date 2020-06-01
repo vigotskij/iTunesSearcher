@@ -11,7 +11,7 @@ struct ITunesResponseContainer: Decodable {
 }
 struct ITunesResponseDataModel: Decodable {
     let wrapperType: WrappedType
-    let kind: Kind
+    let kind: Kind?
     let collectionId: Int?
     var collectionIdString: String? {
         guard let collectionId = collectionId else {

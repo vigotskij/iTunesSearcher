@@ -33,7 +33,8 @@ private extension DetailInteractorImplementation {
         guard let endpoint = Endpoints.detail(collectionId).value else {
             return
         }
-        URLSession.shared.retrieveData(with: endpoint) { [weak self] (response: ITunesResponseContainer?, error) in
+        URLSession.shared
+            .retrieveData(with: endpoint) { [weak self] (response: ITunesResponseContainer?, _, error) in
             guard let response = response else {
                 #if DEBUG
                 print(error ?? "Unknown error while unwrapping response.")
