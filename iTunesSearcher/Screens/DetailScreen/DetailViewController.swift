@@ -17,19 +17,25 @@ final class DetailViewController: UIViewController {
         }
     }
     // MARK: - View model
-    private var viewModel: String? {
+    private var viewModel: DetailModels.ViewModel? {
         didSet {
-            updateUI()
+            DispatchQueue.main.async { [weak self] in
+                self?.updateUI()
+            }
         }
     }
+    // MARK: - Outlets
+    @IBOutlet private weak var coverImage: UIImageView?
 }
 extension DetailViewController: DetailView {
-    func updateView() {
-
+    func updateView(with viewModel: DetailModels.ViewModel) {
+        self.viewModel = viewModel
     }
 }
 private extension DetailViewController {
-    func updateUI() {}
+    func updateUI() {
+        coverImage?.image = viewModel?.coverImage
+    }
 }
 // MARK: - Life cycle
 extension DetailViewController {

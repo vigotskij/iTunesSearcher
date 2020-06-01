@@ -16,9 +16,9 @@ final class DetailInteractorImplementation {
     // MARK: - Data store
     var collectionId: String
     // MARK: - Internal properties
-    private var retrivedData: [ITunesResponseDataModel] = [] {
+    private var retrivedData: DetailModels.Response = .init(rawData: []) {
         didSet {
-            output?.presentData()
+            output?.presentData(with: DetailModels.DataModel(from: retrivedData))
         }
     }
 }
@@ -41,7 +41,7 @@ private extension DetailInteractorImplementation {
                 #endif
                 return
             }
-            self?.retrivedData = response.results
+            self?.retrivedData = DetailModels.Response(rawData: response.results)
         }
     }
 }

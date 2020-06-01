@@ -20,13 +20,24 @@ enum DetailModels {
         struct SongsDataModel {
             let trackNumber: Int?
             let trackName: String?
+
+            static func < (lhs: SongsDataModel, rhs: SongsDataModel) -> Bool {
+                guard
+                    let lhsTrackNumber = lhs.trackNumber,
+                    let rhsTrackNumber = rhs.trackNumber else {
+                        return false
+                }
+                return lhsTrackNumber < rhsTrackNumber
+            }
         }
 
         init(from response: Response) {
             let coverImageString = response.rawData.first?.artworkUrl100 ?? ""
             albumTitle = response.rawData.first?.collectionName
             coverImageUrl = URL(string: coverImageString)
-            filteredData = response.rawData.map { SongsDataModel(trackNumber: $0.trackNumber,
+            filteredData = response.rawData
+                .filter { $0.kind != nil && $0.kind == .song }
+                .map { SongsDataModel(trackNumber: $0.trackNumber,
                                                                  trackName: $0.trackName)}
         }
     }
